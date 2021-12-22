@@ -25,4 +25,9 @@ public class UserServiceImpl implements IUserService {
     public User findUserInfo() {
         return userDao.findUserInfo();
     }
+
+    @Override
+    public void insertUserInfo(User user) {
+        userDao.insertUserInfo(user);
+    }
 }

@@ -8,6 +8,7 @@ import javax.annotation.Resource;
 
 /**
  * ClassName UserDao.java
+ *
  * @author owl-loong Yuan
  * @version 1.0.0 <br/>
  * Description 数据交互API <br/>
@@ -28,6 +29,10 @@ public class UserDao {
      */
     public User findUserInfo() {
         return userMapper.findUserInfo();
+    }
+
+    public void insertUserInfo(User user) {
+        userMapper.insertUserInfo(user);
     }
 
 }

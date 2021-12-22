@@ -14,4 +14,5 @@ public interface IUserService {
 
      User findUserInfo();
 
+     void insertUserInfo(User user);
 }

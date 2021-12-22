@@ -3,8 +3,25 @@
 <mapper namespace="com.owl.mapper.UserMapper">
 
     <select id="findUserInfo" resultType="com.owl.model.User">
-        select name, age, password
+        select name,
+               age,
+               account,
+               address,
+               tel_phone,
+               qq,
+               wechat,
+               email,
+               sex,
+               birthday
         from user
     </select>
+
+    <insert id="insertUserInfo" parameterType="com.owl.model.User">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into user(name,account,age,password_encrypt,address,tel_phone,qq,wechat,email,sex,birthday)
+        value(#{name},#{account},#{age},#{passwordEncrypt},#{address},#{telPhone},#{qq},#{wechat},#{email},#{sex},#{birthday})
+    </insert>
 
 </mapper>

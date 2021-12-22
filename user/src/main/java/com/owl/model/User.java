@@ -18,5 +18,22 @@ public class User {
 
     private int age;
 
-    private String password;
+    private String passwordEncrypt;
+
+    private String address;
+
+    private String telPhone;
+
+    private String qq;
+
+    private String wechat;
+
+    private String email;
+
+    private String sex;
+
+    private String birthday;
+
+    private String account;
+
 }

@@ -12,5 +12,7 @@ import org.apache.ibatis.annotations.Mapper;
  * createTime 2021-12-06 16:49:00
  */
 public interface UserMapper {
-     User findUserInfo();
+    User findUserInfo();
+
+    void insertUserInfo(User user);
 }

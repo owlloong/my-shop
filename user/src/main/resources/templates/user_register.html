@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+</head>
+<body>
+<div style="margin: 0 auto; text-align: center;">
+    <form action="userRegister" method="post">
+        <div><label for="name">姓名:</label><input type="text" name="name" id="name"/></div>
+        <div><label for="account">昵称:</label><input type="text" name="account" id="account"/></div>
+        <div><label for="age">年龄:</label><input type="text" name="age" id="age"/></div>
+        <div>
+            <label for="password_encrypt">密码:</label><input type="password" name="passwordEncrypt" id="password_encrypt"/>
+        </div>
+        <div><label for="address">地址:</label><input type="text" name="address" id="address"/></div>
+        <div><label for="tel_phone">电话:</label><input type="text" name="telPhone" id="tel_phone"/></div>
+        <div><label for="qq">QQ:</label><input type="text" name="qq" id="qq"/></div>
+        <div><label for="wechat">微信:</label><input type="text" name="wechat" id="wechat"/></div>
+        <div><label for="email">邮箱:</label><input type="text" name="email" id="email"/></div>
+        <div>性别:
+            <label for="sex1">男</label><input type="radio" name="sex" id="sex1" value="1" checked="checked">
+            <label for="sex2">女</label><input type="radio" name="sex" id="sex2" value="2">
+        </div>
+        <div><label for="birthday">出生日期:</label><input type="text" name="birthday" id="birthday"/></div>
+        <button type="submit">用户注册</button>
+    </form>
+</div>
+</body>
+</html>
