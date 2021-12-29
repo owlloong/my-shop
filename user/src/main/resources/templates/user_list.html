@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+</head>
+<body>
+    <div>
+        <table border="1">
+            <tr>
+                <td>姓名</td>
+                <td>年龄</td>
+                <td>地址</td>
+                <td>电话</td>
+                <td>QQ</td>
+                <td>微信</td>
+                <td>邮箱</td>
+                <td>性别</td>
+                <td>生日</td>
+                <td>账号</td>
+                <td>操作</td>
+            </tr>
+            <tr th:each="user:${users}">
+                <td th:text="${user.name}"></td>
+                <td th:text="${user.age}"></td>
+                <td th:text="${user.address}"></td>
+                <td th:text="${user.telPhone}"></td>
+                <td th:text="${user.qq}"></td>
+                <td th:text="${user.wechat}"></td>
+                <td th:text="${user.email}"></td>
+                <td th:text="${user.sex=='1'?'男':'女'}"></td>
+                <td th:text="${user.birthday}"></td>
+                <td th:text="${user.account}"></td>
+                <td>
+                    <a href="#" th:href="@{/toUserView(id=${user.id})}" target="_blank">查看</a>
+                    <a href="#" th:href="@{/toUserUpdate(id=${user.id})}" target="_blank">修改</a>
+                    <a href="#" th:href="@{/delUserById(id=${user.id})}" target="_blank">删除</a>
+
+                </td>th:
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

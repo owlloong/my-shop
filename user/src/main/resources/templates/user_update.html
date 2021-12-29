@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+</head>
+<body>
+<div style="margin: 0 auto; text-align: center;">
+    <form action="userUpdate" method="post">
+        <input type="hidden" name="id" th:value="${user.id}"/>
+        <div><label for="name">姓名:</label><input type="text" name="name" id="name" th:value="${user.name}"/></div>
+        <div><label for="account">昵称:</label><input type="text" name="account" id="account" th:value="${user.account}"/>
+        </div>
+        <div><label for="age">年龄:</label><input type="text" name="age" id="age" th:value="${user.age}"/></div>
+        <!--        <div>-->
+        <!--            <label for="password_encrypt">密码:</label><input type="password" name="passwordEncrypt" id="password_encrypt"-->
+        <!--                                                            th:value="${user.passwordEncrypt}"/>-->
+        <input type="hidden" name="passwordEncrypt" th:value="${user.passwordEncrypt}">
+        <!--        </div>-->
+        <div><label for="address">地址:</label><input type="text" name="address" id="address" th:value="${user.address}"/>
+        </div>
+        <div>电话:
+            <span th:text="${user.telPhone}"></span> <input type="hidden" name="telPhone" th:value="${user.telPhone}"/>
+        </div>
+        <div><label for="qq">QQ:</label><input type="text" name="qq" id="qq" th:value="${user.qq}"/></div>
+        <div><label for="wechat">微信:</label><input type="text" name="wechat" id="wechat" th:value="${user.wechat}"/>
+        </div>
+        <div><label for="email">邮箱:</label><input type="text" name="email" id="email" th:value="${user.email}"/>
+        </div>
+        <div>
+            性别:
+            <span th:text="${user.sex=='1'?'男':'女'}"></span>
+            <input type="hidden" th:value="${user.sex}"/>
+            <!--            <span th:value="${user.sex=='1'?'男':'女'}"/>-->
+            <!--            <label for="sex1">男</label><input type="radio" name="sex" id="sex1" value="1" checked="checked">-->
+            <!--            <label for="sex2">女</label><input type="radio" name="sex" id="sex2" value="2">-->
+        </div>
+        <div><label for="birthday">出生日期:</label>
+            <input type="text" name="birthday" id="birthday" th:value="${user.birthday}"/>
+        </div>
+        <button type="submit">用户修改</button>
+    </form>
+</div>
+</body>
+</html>

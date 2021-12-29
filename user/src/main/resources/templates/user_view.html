@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <style rel="stylesheet">
+        div div {
+            border-bottom: 1px solid aquamarine;
+        }
+        span{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div>姓名：<span th:text="${user.name}"></span></div>
+    <div>账号：<span th:text="${user.account}"></span></div>
+    <div>年龄：<span th:text="${user.age}"></span></div>
+    <div>地址：<span th:text="${user.address}"></span></div>
+    <div>电话：<span th:text="${user.telPhone}"></span></div>
+    <div>QQ：<span th:text="${user.qq}"></span></div>
+    <div>微信：<span th:text="${user.wechat}"></span></div>
+    <div>邮箱：<span th:text="${user.email}"></span></div>
+    <div>性别：<span th:text="${user.sex=='1'?'男':'女'}"></span></div>
+    <div>生日：<span th:text="${user.birthday}"></span></div>
+</div>
+</body>
+</html>

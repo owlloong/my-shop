@@ -1,7 +1,10 @@
 package com.owl.mapper;
 
 import com.owl.model.User;
+import com.owl.vo.UserVo;
 import org.apache.ibatis.annotations.Mapper;
+
+import java.util.List;
 
 /**
  * className UserMapper.java
@@ -15,4 +18,12 @@ public interface UserMapper {
     User findUserInfo();
 
     void insertUserInfo(User user);
+
+    void updateUserInfo(User user);
+
+    User findUserInfoById(int userId);
+
+    List<User> queryUserByVo(UserVo userVo);
+
+    void deleteUserById(int id);
 }

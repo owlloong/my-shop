@@ -1,6 +1,9 @@
 package com.owl.service;
 
 import com.owl.model.User;
+import com.owl.vo.UserVo;
+
+import java.util.List;
 
 /**
  * ClassName IUserService.java
@@ -15,4 +18,12 @@ public interface IUserService {
      User findUserInfo();
 
      void insertUserInfo(User user);
+
+     void updateUserInfo(User user);
+
+     User findUserById(int id);
+
+     List<User> queryUserByVo(UserVo userVo);
+
+     void deleteUserById(int id);
 }

@@ -2,9 +2,11 @@ package com.owl.dao;
 
 import com.owl.mapper.UserMapper;
 import com.owl.model.User;
+import com.owl.vo.UserVo;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * ClassName UserDao.java
@@ -33,6 +35,22 @@ public class UserDao {
 
     public void insertUserInfo(User user) {
         userMapper.insertUserInfo(user);
+    }
+
+    public void updateUserInfo(User user){
+        userMapper.updateUserInfo(user);
+    }
+
+    public User findUserInfoById(int id){
+        return userMapper.findUserInfoById(id);
+    }
+
+    public List<User> queryUserByVo(UserVo userVo){
+        return userMapper.queryUserByVo(userVo);
+    }
+
+    public void deleteUserById(int id){
+        userMapper.deleteUserById(id);
     }
 
 }

@@ -24,4 +24,72 @@
         value(#{name},#{account},#{age},#{passwordEncrypt},#{address},#{telPhone},#{qq},#{wechat},#{email},#{sex},#{birthday})
     </insert>
 
+    <update id="updateUserInfo" parameterType="com.owl.model.User">
+        update user
+        set name=#{name},
+            age=#{age},
+            address=#{address},
+            qq=#{qq},
+            wechat=#{wechat},
+            email=#{email},
+            sex=#{sex},
+            birthday=#{birthday},
+            account=#{account}
+        where id = #{id}
+    </update>
+
+    <select id="findUserInfoById" parameterType="int" resultType="com.owl.model.User">
+        select *
+        from user
+        where id = #{id}
+    </select>
+
+    <select id="queryUserByVo" parameterType="com.owl.vo.UserVo" resultType="com.owl.model.User">
+        select * from user
+        <where>
+            <include refid="customerSql">
+
+            </include>
+        </where>
+    </select>
+
+    <delete id="deleteUserById" parameterType="java.lang.Integer">
+        delete from user where id=#{id}
+    </delete>
+
+    <sql id="customerSql">
+        <if test="customerUser != null">
+            <if test="customerUser.name != null and customerUser.name !=''">
+                and name = "${customerUser.name}"
+            </if>
+            <if test="customerUser.age != null and customerUser.age !=''">
+                and age = "${customerUser.age}"
+            </if>
+            <if test="customerUser.address != null and customerUser.address !=''">
+                and address = "${customerUser.address}"
+            </if>
+            <if test="customerUser.telPhone != null and customerUser.telPhone !=''">
+                and tel_phone = "${customerUser.telPhone}"
+            </if>
+            <if test="customerUser.qq != null and customerUser.qq !=''">
+                and qq = "${customerUser.qq}"
+            </if>
+            <if test="customerUser.wechat != null and customerUser.wechat !=''">
+                and wechat = "${customerUser.wechat}"
+            </if>
+            <if test="customerUser.email != null and customerUser.email !=''">
+                and email = "${customerUser.email}"
+            </if>
+            <if test="customerUser.sex != null and customerUser.sex !=''">
+                and sex = "${customerUser.sex}"
+            </if>
+            <if test="customerUser.birthday != null and customerUser.birthday !=''">
+                and birthday = "${customerUser.birthday}"
+            </if>
+            <if test="customerUser.account != null and customerUser.account !=''">
+                and account = "${customerUser.account}"
+            </if>
+        </if>
+    </sql>
+
 </mapper>
