@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div>
+        <span>父类：</span><span th:text="${parentProductType.productTypeName}"></span>
+    </div>
+    <div>产品类别名称：<span th:text="${productType.productTypeName}"></span></div>
+    <div> 产品类别描述：<span th:text="${productType.productTypeDescription}"></span></div>
+    <div>等级：<span th:text="${productType.typeLevel}"></span></div>
+</div>
+</body>
+</html>

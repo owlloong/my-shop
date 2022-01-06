@@ -1,5 +1,12 @@
-server:
-    port: 8081
 spring:
+    datasource:
+        url: jdbc:mysql://127.0.0.1:3306/myshop?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull
+        username: root
+        password: root
+        driver-class-name: com.mysql.jdbc.Driver
+    thymeleaf:
+        suffix: .html
     application:
         name: product-type
+server:
+    port: 8081

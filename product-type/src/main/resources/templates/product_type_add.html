@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <div>
+        <span>父类：</span><span th:text="${productType.productTypeName}"></span>
+    </div>
+    <form action="insertProductType" method="post">
+        <input type="hidden" th:value="${productType.id}" name="parentId"/>
+        <div>
+            <label>
+                产品类别名称：
+                <input type="text" name="productTypeName"/>
+            </label>
+        </div>
+        <div>
+            <label>
+                产品类别描述：
+                <input type="text" name="productTypeDescription">
+            </label>
+        </div>
+        <div>
+            <label>
+                等级：
+                <input type="text" name="typeLevel">
+            </label>
+        </div>
+        <div>
+            <button type="submit">提交</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
