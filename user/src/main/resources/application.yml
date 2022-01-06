@@ -6,4 +6,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   thymeleaf:
     suffix: .html
-
+  application:
+    name: user
+server:
+  port: 8082
