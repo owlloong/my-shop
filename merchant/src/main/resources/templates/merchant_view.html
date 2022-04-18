@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <style rel="stylesheet">
+        div div {
+            border-bottom: 1px solid aquamarine;
+        }
+
+        span {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div>商户名称：<span th:text="${merchant.merchantName}"></span></div>
+    <div>商户账号：<span th:text="${merchant.merchantAccount}"></span></div>
+    <div>商户店铺名称：<span th:text="${merchant.merchantShopName}"></span></div>
+    <div>商户经营范围：<span th:text="${merchant.merchantScope}"></span></div>
+    <div>审核状态：
+        <div th:switch="${merchant.auditStatus}" style="display: inline;">
+            <span th:case="'1'" style="color:#e2dd4b;">提交成功</span>
+            <span th:case="'2'" style="color:#00ff00;">审核成功 </span>
+            <span th:case="'3'" style="color:#ff0000;">审核失败</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

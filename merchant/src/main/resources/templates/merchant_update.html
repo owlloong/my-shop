@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+</head>
+<body>
+<div >
+    <form action="updateMerchant" method="post">
+        <input type="hidden" th:value="${merchant.id}" name="id">
+        <input type="hidden" th:value="${merchant.merchantName}" name="merchantName">
+        <input type="hidden" th:value="${merchant.merchantAccount}" name="merchantAccount">
+        <input type="hidden" th:value="${merchant.merchantPassword}" name="merchantPassword">
+        商家名称：<span th:text="${merchant.merchantName}"></span> <br/>
+        商家账户：<span th:text="${merchant.merchantAccount}"></span><br/>
+        <label>
+            商户店铺名称：
+            <input type="text" th:value="${merchant.merchantShopName}" name="merchantShopName">
+        </label><br/>
+        <label>
+            商户经营范围：
+            <input type="text" th:value="${merchant.merchantScope}" name="merchantScope">
+        </label><br/>
+        <button type="submit">用户修改</button>
+    </form>
+</div>
+</body>
+</html>

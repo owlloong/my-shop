@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>商户注册</title>
+</head>
+<body>
+<div style="margin: 0 auto; text-align: center;">
+    <form action="addMerchant" method="post">
+        <div>
+            <label for="merchant_name">商户名称:</label>
+            <input type="text" name="merchantName" id="merchant_name"/>
+        </div>
+        <div>
+            <label for="merchant_shop_name">商户店铺名称:</label>
+            <input type="text" name="merchantShopName" id="merchant_shop_name"/>
+        </div>
+        <div>
+            <label for="merchant_account">商户账号:</label>
+            <input type="text" name="merchantAccount" id="merchant_account"/>
+        </div>
+        <div>
+            <label for="merchant_password">登陆密码:</label>
+            <input type="password" name="merchantPassword" id="merchant_password"/>
+        </div>
+        <div>
+            <label for="merchant_scope">经营范围:</label>
+            <input type="text" name="merchantScope" id="merchant_scope"/>
+        </div>
+<!--        <div>-->
+<!--            <label for="audit_status">电话:</label>-->
+<!--            <input type="text" name="auditStatus" id="audit_status"/>-->
+<!--        </div>-->
+        <button type="submit">用户注册</button>
+    </form>
+</div>
+</body>
+</html>

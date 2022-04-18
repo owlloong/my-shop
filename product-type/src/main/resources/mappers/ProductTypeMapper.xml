@@ -41,13 +41,13 @@
     <sql id="constSql">
         <if test="constProductType != null">
             <if test="constProductType.productTypeName != null and constProductType.productTypeName !=''">
-                and name = "${constProductType.productTypeName}"
+                and product_type_name = "${constProductType.productTypeName}"
             </if>
             <if test="constProductType.productTypeDescription != null and constProductType.productTypeDescription !=''">
-                and age = "${constProductType.productTypeDescription}"
+                and product_type_description = "${constProductType.productTypeDescription}"
             </if>
             <if test="constProductType.typeLevel != null and constProductType.typeLevel !=''">
-                and address = "${constProductType.typeLevel}"
+                and type_level = "${constProductType.typeLevel}"
             </if>
         
         </if>
